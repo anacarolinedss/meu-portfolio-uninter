@@ -1,0 +1,380 @@
+/* Estilos Gerais para o HTML e corpo da página */
+html {
+    font-family: 'Verdana', sans-serif; /* Fonte mais comum e legível */
+    color: #003366; /* Cor principal de texto: Azul marinho escuro */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding e borda não aumentem o tamanho total */
+}
+
+body {
+    background-color: #F8F8F8; /* Um cinza bem claro para o fundo */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Espaçamento entre linhas para melhor leitura */
+}
+
+/* Estilo para links genéricos */
+a {
+    color: #0056b3; /* Um azul um pouco mais claro para links */
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease; /* Transição suave na cor ao passar o mouse */
+}
+
+a:hover {
+    color: #003366; /* Cor mais escura no hover do link */
+    text-decoration: underline; /* Sublinha ao passar o mouse */
+}
+
+/* Estilo da barra de navegação (abas) */
+.tab {
+    overflow: hidden; /* Garante que os botões não ultrapassem */
+    border-bottom: 3px solid #FFD700; /* Borda inferior amarela dourado */
+    background-color: #003366; /* Fundo azul marinho escuro para a navegação */
+    display: flex; /* Para alinhar os botões lado a lado */
+    justify-content: center; /* Centraliza os botões */
+    flex-wrap: wrap; /* Permite que os botões quebrem linha em telas pequenas */
+    padding: 10px 0;
+}
+
+/* Estilo dos botões da aba */
+.tab button {
+    background-color: transparent; /* Fundo transparente para o botão */
+    text-transform: uppercase; /* Texto em maiúsculas */
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px 25px; /* Mais padding para botões maiores e clicáveis */
+    transition: all 0.3s ease; /* Transição suave para todas as propriedades */
+    font-weight: bold;
+    color: #FFD700; /* Cor do texto: Amarelo dourado */
+    font-size: 1.1em;
+    margin: 0 5px; /* Espaçamento entre botões */
+    border-radius: 5px; /* Bordas levemente arredondadas */
+}
+
+/* Efeito ao passar o mouse sobre o botão da aba */
+.tab button:hover {
+    background-color: #0056b3; /* Azul mais claro no hover */
+    color: white; /* Texto branco no hover */
+    font-style: normal; /* Remove itálico do hover original */
+    transform: translateY(-2px); /* Pequeno efeito de elevação */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra para destacar */
+}
+
+/* Estilo do botão da aba ativa */
+.tab button.active {
+    background-color: #FFD700; /* Fundo amarelo dourado para a aba ativa */
+    font-weight: bolder; /* Mais negrito */
+    color: #003366; /* Texto azul marinho na aba ativa */
+    border-bottom: 3px solid #0056b3; /* Linha azul na aba ativa */
+    pointer-events: none; /* Desabilita clique na aba já ativa */
+}
+
+/* Conteúdo das abas */
+.tabcontent {
+    display: none; /* Esconde todas as abas por padrão */
+    padding: 30px; /* Mais padding para o conteúdo */
+    border-top: none;
+    max-width: 960px; /* Limita a largura para melhor leitura */
+    margin: 30px auto; /* Centraliza o conteúdo e adiciona margem */
+    background-color: white;
+    border-radius: 8px; /* Bordas arredondadas para as caixas de conteúdo */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+/* Estilos para o cabeçalho principal do portfólio */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #003366;
+    color: #FFD700;
+    margin-bottom: 30px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+header > h1 {
+    line-height: 1.2; /* Ajuste para espaçamento de linha */
+    font-size: 3.5em; /* Tamanho maior para o título principal */
+    text-transform: uppercase;
+    margin-bottom: 0.1em; /* Espaçamento menor abaixo do h1 */
+}
+
+header > h2 {
+    line-height: 1;
+    font-size: 2.2em;
+    font-style: italic;
+    font-variant-caps: all-small-caps;
+    margin-top: 0; /* Remove margem superior padrão */
+    color: white; /* Cor branca para o nome */
+}
+
+/* Estilos para as seções dentro das abas */
+article {
+    margin: 2rem 0; /* Margem apenas superior e inferior */
+}
+
+main > article > section {
+    margin-bottom: 25px; /* Espaçamento entre seções dentro de uma aba */
+}
+
+main > article > section > h3 {
+    font-variant: small-caps;
+    font-size: 2.5em;
+    font-style: italic;
+    font-weight: bold;
+    color: #003366; /* Cor do título da seção */
+    border-bottom: 2px solid #EEE; /* Linha abaixo do título da seção */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+main > article > section > h4 {
+    line-height: 1.2; /* Ajuste de linha */
+    font-size: 1.8em;
+    font-style: normal;
+    font-variant: normal; /* Remove small-caps dos h4 */
+    color: #0056b3; /* Cor para subtítulos */
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+/* Estilo para links específicos como LinkedIn/GitHub */
+.link {
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline !important; /* Garante que o link seja sublinhado */
+    color: #0056b3;
+}
+
+.link:hover {
+    color: #003366;
+}
+
+.link-externo {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Estilo do formulário de contato */
+form {
+    color: #003366; /* Cor do texto do formulário */
+    margin: 30px auto; /* Centraliza o formulário */
+    padding: 30px;
+    border-radius: 10px; /* Bordas mais arredondadas */
+    background-color: #FFD700; /* Fundo amarelo dourado para o formulário */
+    max-width: 600px; /* Limita a largura do formulário */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+form > div {
+    margin-bottom: 15px; /* Espaçamento entre os grupos de input */
+}
+
+form > div > label {
+    display: block; /* Cada label em uma nova linha */
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+form > div > input,
+form > div > textarea {
+    width: calc(100% - 20px); /* Ocupa a largura total menos o padding */
+    padding: 10px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    box-sizing: border-box; /* Inclui padding na largura */
+    font-size: 1em;
+    color: #333;
+}
+
+form > div > textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+    min-height: 100px; /* Altura mínima para a área de texto */
+}
+
+/* Estilo do botão de envio do formulário */
+form > div > button {
+    margin-top: 20px;
+    background-color: #003366; /* Azul marinho escuro */
+    border: none; /* Remove borda */
+    border-radius: 8px;
+    color: #FFD700; /* Texto amarelo dourado */
+    padding: 15px 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: auto; /* Ajusta a largura ao conteúdo */
+    display: block; /* Coloca o botão em sua própria linha */
+    margin-left: auto; /* Centraliza o botão */
+    margin-right: auto; /* Centraliza o botão */
+}
+
+form > div > button:hover {
+    background-color: #0056b3; /* Azul mais claro no hover */
+    transform: translateY(-1px); /* Pequeno efeito de elevação */
+}
+
+/* Estilos para a seção de formação e idiomas lado a lado */
+.formacao-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+    gap: 30px; /* Espaçamento entre as duas "colunas" */
+    justify-content: space-around; /* Distribui o espaço entre elas */
+    margin-top: 20px;
+}
+
+.formacao-academica,
+.idiomas-conhecidos {
+    flex: 1; /* Permite que cada um ocupe o espaço disponível */
+    min-width: 280px; /* Garante um tamanho mínimo para não ficarem muito apertados */
+    padding: 20px;
+    border: 1px solid #EEE;
+    border-radius: 8px;
+    background-color: #FDFDFD; /* Fundo mais claro para os blocos */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.formacao-academica ul,
+.idiomas-conhecidos ul {
+    list-style: none; /* Remove os marcadores padrão da lista */
+    padding: 0;
+}
+
+.formacao-academica ul li,
+.idiomas-conhecidos ul li {
+    margin-bottom: 10px;
+    color: #333; /* Cor mais escura para o texto da lista */
+}
+
+/* Estilos para os itens do portfólio */
+.portfolio-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px; /* Espaçamento entre os cards do portfólio */
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.portfolio-item {
+    background-color: #F0F8FF; /* Azul bem clarinho para o fundo do item */
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 calc(45% - 25px); /* Dois itens por linha em telas maiores (ajuste se precisar de mais) */
+    box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    min-width: 300px; /* Tamanho mínimo para o card */
+    text-align: center; /* Centraliza o texto dentro do card */
+}
+
+.portfolio-item h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #003366;
+    font-size: 1.5em; /* Ajuste o tamanho da fonte do título do projeto */
+}
+
+.portfolio-item p {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.portfolio-item a.link {
+    display: inline-block; /* Permite padding e margem */
+    background-color: #0056b3; /* Fundo azul para o botão */
+    color: white; /* Texto branco */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none !important; /* Garante que não sublinhe */
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.portfolio-item a.link:hover {
+    background-color: #003366; /* Azul mais escuro no hover */
+    transform: translateY(-1px);
+}
+
+
+/* Estilo do Rodapé */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #003366; /* Fundo azul marinho escuro */
+    color: #FFD700; /* Texto amarelo dourado */
+    margin-top: 50px;
+    font-size: 0.9em;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+/* Media Queries para Responsividade (ajustes para telas menores) */
+@media (max-width: 768px) {
+    header > h1 {
+        font-size: 2.5em; /* Ajusta tamanho do título principal em telas menores */
+    }
+
+    header > h2 {
+        font-size: 1.8em; /* Ajusta tamanho do subtítulo em telas menores */
+    }
+
+    .tab button {
+        padding: 10px 15px; /* Ajusta padding dos botões da aba */
+        font-size: 0.9em;
+        margin: 0 2px;
+    }
+
+    .tabcontent {
+        padding: 20px; /* Menos padding em telas menores */
+        margin: 20px auto;
+    }
+
+    main > article > section > h3 {
+        font-size: 2em; /* Ajusta tamanho do título da seção */
+    }
+
+    main > article > section > h4 {
+        font-size: 1.4em; /* Ajusta tamanho do subtítulo da seção */
+    }
+
+    .formacao-container {
+        flex-direction: column; /* Coloca formação e idiomas um abaixo do outro */
+        gap: 20px;
+    }
+
+    .portfolio-item {
+        flex: 1 1 100%; /* Um item por linha em telas menores */
+        min-width: unset; /* Remove o min-width para flexibilidade total */
+    }
+
+    form {
+        margin: 20px 15px; /* Margem nas laterais em telas pequenas */
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    header > h1 {
+        font-size: 2em;
+    }
+
+    header > h2 {
+        font-size: 1.5em;
+    }
+
+    .tab button {
+        padding: 8px 10px;
+        font-size: 0.8em;
+    }
+}
+
+/* Estilo para focar na primeira aba ao carregar (se JS não for executado rapidamente) */
+.tabcontent:first-of-type {
+    display: block; /* Garante que a primeira aba seja visível inicialmente */
+}

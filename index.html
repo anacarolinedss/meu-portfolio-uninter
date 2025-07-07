@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Ana Caroline Santos </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <link href="estilo.css" rel="stylesheet" />
+
+    </head>
+<body>
+    <nav class="tab" role="tab">
+        <button class="tablink" onclick="mudaTab(event, 'inicio');" title="Página Inicial">Início</button>
+        <button class="tablink" onclick="mudaTab(event, 'sobre');" title="Sobre Mim">Sobre Mim</button>
+        <button class="tablink" onclick="mudaTab(event, 'formacao');" title="Formação">Formação e Idiomas</button>
+        <button class="tablink" onclick="mudaTab(event, 'portifolio');" title="Portfólio">Portfólio</button>
+        <button class="tablink" onclick="mudaTab(event, 'contato');" title="Contato">Contato</button>
+    </nav>
+
+    <main>
+        <header>
+            <h1>Portfólio Pessoal</h1>
+            <h2>Ana Caroline Santos</h2>
+            <img src="foto.jpg" alt="Foto de Ana Caroline Santos" class="profile-pic">
+
+        </header>
+
+        <article class="tabcontent" id="inicio">
+            <section>
+                <h3>Bem-Vindo(a) ao Meu Portfólio!</h3>
+                <p>Olá! Seja bem-vindo(a) ao meu espaço digital. Aqui você encontrará um pouco sobre minha trajetória, habilidades e projetos com foco em dados e tecnologia.      Sinta-se à vontade para explorar as seções usando o menu acima.</p>
+                  <p>Meu objetivo é demonstrar meus conhecimentos em análise e visualização de dados, programação e as tecnologias que estou aprendendo ao longo da minha formação em Análise e Desenvolvimento de Sistemas na UNINTER.</p>
+            </section>
+        </article>
+
+        <article class="tabcontent" id="sobre">
+            <section>
+        <h3>Sobre Mim</h3>
+                   <p>Olá! Meu nome é Ana Caroline Santos e sou uma entusiasta da área de dados, estudante de <strong>Análise e Desenvolvimento de Sistemas</strong> na UNINTER. 
+                    Tenho background em pesquisa científica e atualmente estou me especializando em transformar dados em soluções estratégicas.</p>
+                  <p>Tenho experiência com ferramentas como <strong>Python (Pandas, Matplotlib), Power BI, SQL, Excel</strong> e <strong>geotecnologias como QGIS e GEE</strong>. Sou apaixonada por resolver problemas reais através da análise de dados e comunicar insights de forma clara e visual.</p>
+                <p>Fora do universo dos dados, gosto de <strong>ler livros de ficção científica, aprender novas receitas e explorar trilhas na natureza</strong>, atividades que me ajudam a manter o foco e a criatividade no dia a dia.</p>
+            </section>
+        </article>
+
+        <article class="tabcontent" id="formacao">
+            <section>
+                <h3>Formação e Idiomas</h3>
+                <div class="formacao-container">
+                    <div class="formacao-academica">
+                        <h4>Formação Acadêmica</h4>
+                        <ul>
+                            <li> Análise e Desenvolvimento de Sistamas - UNINTER (10/2024 - 04/2027)</li>
+                            <li> Bacharelado em Biologia- UFRB (04/2018 - 04/2024)</li>
+                        </ul>
+                    </div>
+                    <div class="idiomas-conhecidos">
+                        <h4>Idiomas</h4>
+                        <ul>
+                            <li>Inglês: Intermediário</li>  
+                        </ul>
+                    </div>
+                </div>
+                <p class="link-externo"><a class="link" href="[https://www.linkedin.com/in/anacarolinetech/]" target="_blank">Confira meu perfil no LinkedIn</a></p>
+            </section>
+        </article>
+
+        <article class="tabcontent" id="portifolio">
+            <section>
+                <h3>Meu Portfólio</h3>
+                <p>Abaixo estão alguns dos projetos que desenvolvi ou que demonstram minhas habilidades em Análise de Dados. Clique nos links para explorar!</p>
+                <div class="portfolio-items">
+                    <div class="portfolio-item">
+                        <h4>💡Projeto 1: DataPulse</h4>
+                        <p>Dashboard interativo construído com HTML, CSS e JavaScript para visualizar indicadores de saúde pública. Foco na clareza visual e responsividade.</p>
+                        <a class="link" href="[LINK PROJETO]" target="_blank">Ver Projeto / Código</a>
+                    </div>
+                    <div class="portfolio-item">
+                        <h4>💡Projeto 2: AgroInsight</h4>
+                        <p>Aplicação analítica focada em dados agrícolas. Utiliza gráficos dinâmicos com D3.js e análise de produtividade para apoiar decisões no campo.</p>
+                        <a class="link" href="[LINK PROJETO]" target="_blank">Ver Projeto / Código</a>
+                    </div>
+                    <div class="portfolio-item">
+                        <h4>💡 Projeto 3: EcoTrack</h4>
+                        <p>Ferramenta de visualização geográfica para rastrear dados ambientais. Integra mapas com Leaflet.js e dados de sensores remotos.</p>
+                        <a class="link" href="[LINK PROJETO]" target="_blank">Ver Projeto / Código</a>
+                    </div>
+                </div>
+                <p class="link-externo"><a class="link" href="https://github.com/anacarolinedss?tab=projects" target="_blank">Explore todos os meus projetos no GitHub</a></p>
+            </section>
+        </article>
+
+        <article class="tabcontent" id="contato">
+            <section>
+                <h3>Entre em Contato</h3>
+                <span>Se você tiver alguma dúvida, sugestão ou proposta de projeto, por favor, utilize o formulário abaixo para me enviar uma mensagem. Retornarei o mais breve possível!</span>
+            </section>
+
+            <section>
+                <form>
+                    <div>
+                        <label for="nome">Nome completo:</label>
+                        <input type="text" id="nome" maxlength="100" placeholder="Seu nome" required />
+                    </div>
+
+                    <div>
+                        <label for="email">E-mail para contato:</label>
+                        <input type="email" id="email" maxlength="300" placeholder="seu.email@exemplo.com" required />
+                    </div>
+
+                    <div>
+                        <label for="mensagem">Sua mensagem:</label>
+                        <textarea id="mensagem" maxlength="5000" placeholder="Digite sua mensagem aqui..." required rows="7"></textarea>
+                    </div>
+
+                    <div>
+                        <button type="submit">Enviar Mensagem</button>
+                    </div>
+                </form>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Ana Caroline Santos. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="scripts.js" type="text/javascript"></script>
+    <script>
+        // Abre a primeira aba por padrão ao carregar a página
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.tablink').click(); // Simula o clique no primeiro botão
+        });
+    </script>
+</body>
+</html>
